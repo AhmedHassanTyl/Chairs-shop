@@ -1,0 +1,121 @@
+:root {
+  --g-color: #3b5d4f;
+  --y-color: #f8be2c;
+  --b-color: #dce5e4;
+  --w-color: #fff;
+  --ow-color: #c9c9c9;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+a {
+  color: var(--w-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--g-color);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .collapse .navbar-nav a:hover {
+  color: var(--w-color) !important;
+}
+.navbar .collapse .icons a:hover {
+  color: var(--ow-color);
+}
+/* Masthead */
+.masthead {
+  height: 100vh;
+  background-color: var(--g-color);
+  padding-top: 56px;
+}
+.masthead .intro-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 992px) {
+  .masthead .intro-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.masthead .intro-box .intro-website p {
+  color: var(--ow-color);
+}
+.masthead .intro-box .intro-website button:first-child {
+  background-color: var(--y-color);
+}
+.masthead .intro-box .intro-website button:last-child {
+  border: 1px solid var(--ow-color);
+}
+.masthead .intro-box .sofa img:last-child {
+  top: -2rem;
+  right: -1rem;
+}
+
+/* Chars */
+.chars {
+}
+.chars .chars-box .char.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  background-color: var(--b-color);
+  z-index: -1;
+  border-radius: 1rem;
+}
+
+.chars .chars-box .char.active::after {
+  content: "+";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  color: var(--w-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 1px 3px 20px 0px #dbdbdb;
+  cursor: pointer;
+}
+
+/* Choose */
+.choose .choose-box .mnue .m i::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--b-color);
+  box-shadow: 1px 3px 20px 0px #dbdbdb;
+  border-radius: 50%;
+  right: -25px;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+.choose .choose-box .img-choose img:last-child {
+  top: -3rem;
+  left: -4rem;
+  z-index: -1;
+}
+
+/* Modern */
+.s-boxes .bo {
+  position: relative;
+}
+.s-boxes .bo i {
+  position: absolute;
+  font-size: 6px;
+  transform: translate(-50%);
+  top: 18px;
+  left: -5px;
+  background-color: black;
+  border-radius: 50%;
+}
